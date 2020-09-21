@@ -7,7 +7,7 @@
       <div class="profile__main_wrapper">
         <!-- Image for mobile view-->
         <div class="profile__main_image bg-gray-light"
-          style="background-image: url('{{ include.content[1].avatar }}')">
+          style="background-image: url('{{ include.content[1].avatar | relative_url }}')">
         </div>
 
         <h1>{{ include.content[1].fullname }}</h1>
@@ -35,8 +35,8 @@
     <!--Img Col-->
     <div class="profile__image">
       <img class="bg-gray-light"
-        src="{{ include.content[1].avatar }}"
-        alt="{{ include.content[1].fullname }}">
+        src="{{ include.content[1].avatar | relative_url }}"
+        alt="{{ include.content[1].fullname | relative_url }}">
     </div>
   </div>
 </section>
