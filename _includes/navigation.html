@@ -1,0 +1,19 @@
+{% for entry in site.data.navigation %}
+{% capture fullurl %}{{ site.baseurl }}{{ entry.url }}{% endcapture %}
+  {% if fullurl == page.url %}
+    {% assign current_page = fullurl %}
+    {% break %}
+  {% elsif page.url contains fullurl %}
+    {% assign current_page = fullurl %}
+  {% endif %}
+{% endfor %}
+
+<ul class="menu">
+{% for entry in site.data.navigation %}
+  <li class="menu-item">
+    <a href="{{ site.baseurl }}{{ entry.url }}" {% if entry.url == current_page %}class="active"{% endif %}>
+      {{ entry.title }}
+    </a>
+  </li>
+{% endfor %}
+</ul>

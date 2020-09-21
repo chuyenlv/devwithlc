@@ -1,0 +1,16 @@
+<header class="bg-gray-dark" role="main-navigation">
+   <div class="container header">
+    <div class="header__left">
+      <a href="{{ "/" | relative_url }}" rel="home" class="branding">
+        <img src="/assets/logo.svg" class="branding__logo" alt="Home">
+        <span class="branding__name">{{ site.title | escape }}</span>
+      </a>
+    </div>
+    <div class="header__nav-toggle">
+        <span class="icon-navigation-drawer-1"></span>
+    </div>
+    <div class="header__right hidden">
+      {%- include navigation.html -%}
+    </div>
+   </div>
+</header>

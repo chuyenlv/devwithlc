@@ -1,0 +1,157 @@
+.header {
+  @apply flex items-center justify-between flex-wrap px-6 py-1;
+
+  &__left {
+    @apply flex items-center flex-shrink-0 text-white mr-6;
+
+    a {
+      @apply text-white;
+    }
+  }
+
+  &__right {
+    @apply w-full flex-grow pt-1;
+  }
+
+  &__nav-toggle {
+    @apply flex items-center px-3 py-2 text-gray-500;
+
+    &:hover {
+      @apply text-white;
+    }
+  }
+}
+
+@screen lg {
+  .header {
+    &__right {
+      @apply flex items-center w-auto pt-0;
+    }
+
+    &__nav-toggle {
+      @apply hidden;
+    }
+  }
+}
+
+.branding {
+  @apply flex font-medium items-center;
+
+  &:hover {
+    @apply no-underline;
+  }
+
+  &__logo {
+    @apply h-10 w-auto;
+  }
+
+  &__name {
+    @apply text-xl;
+  }
+}
+
+.content-sidebar {
+  @apply flex flex-wrap;
+
+  &__left {
+    @apply w-full flex flex-col items-center;
+  }
+
+  &__right {
+    @apply w-full flex flex-col items-center;
+  }
+}
+
+@screen lg {
+  .content-sidebar {
+    &__left {
+      @apply w-2/3 pr-3;
+    }
+
+    &__right {
+      @apply w-1/3 pl-3;
+    }
+  }
+}
+
+.footer {
+  @apply text-gray-800 bg-gray-200;
+
+  .branding {
+    @apply text-gray-900;
+  }
+
+  &__content {
+    @apply px-5 py-2 mx-auto flex items-center flex-col justify-center;
+  }
+
+  &__copyright {
+    @apply text-sm text-gray-900 mt-4 mb-0;
+  }
+}
+
+@screen sm {
+  .footer {
+    &__content {
+      @apply flex-row;
+    }
+
+    &__copyright {
+      @apply ml-4 pl-4 border-l-2 border-gray-800 py-2 mt-0;
+    }
+  }
+}
+
+ul.menu {
+  @apply justify-end flex-1 items-center;
+
+  li {
+    @apply mr-3;
+
+    a {
+      @apply inline-block text-gray-600 no-underline py-2 px-4;
+
+      &:not(.is-active):hover {
+        @apply text-gray-200;
+      }
+
+      &.active {
+        @apply text-white;
+      }
+    }
+  }
+}
+
+@screen lg {
+  .menu {
+    @apply flex;
+  }
+}
+
+.pager {
+  @apply py-6;
+
+  &__items {
+    @apply flex items-center justify-center;
+  }
+
+  &__item {
+    @apply mx-1 px-3 py-2 bg-gray-200;
+
+    &.is-active a {
+      @apply text-gray-500;
+    }
+
+    a {
+      @apply font-bold;
+    }
+
+    &--first {
+      @apply ml-0;
+    }
+
+    &--last {
+      @apply mr-0;
+    }
+  }
+}

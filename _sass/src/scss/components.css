@@ -1,0 +1,170 @@
+.profile {
+  @apply max-w-4xl flex items-center h-auto flex-wrap mx-auto py-20;
+
+  &__main {
+    @apply w-full rounded-lg shadow-2xl bg-white mx-6;
+
+    &_wrapper {
+      @apply p-4 text-center;
+    }
+
+    &_image {
+      @apply block rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-top;
+    }
+
+    &_underline {
+      @apply mx-auto w-4/5 border-b-2 border-indigo-500 opacity-50 mb-4;
+    }
+
+    ul {
+      @apply mb-8;
+
+      span {
+        @apply h-4 text-indigo-500 pr-4;
+      }
+    }
+
+    .form-actions {
+      @apply justify-center my-8;
+    }
+  }
+
+  &__image {
+    @apply w-full;
+
+    img {
+      @apply hidden;
+    }
+  }
+}
+
+@screen sm {
+  .profile {
+    @apply py-0;
+    min-height: calc(100vh - 3rem);
+
+    &__main {
+      @apply w-3/5 rounded-l-lg rounded-r-none shadow mx-0;
+
+      &_wrapper {
+        @apply text-left;
+      }
+
+      &_image {
+        @apply hidden;
+      }
+
+      &_underline {
+        @apply mx-0;
+      }
+
+      ul {
+        li {
+          @apply justify-start;
+        }
+      }
+
+      .form-actions {
+        @apply justify-start;
+      }
+    }
+
+    &__image {
+      @apply w-2/5;
+
+      img {
+        @apply rounded-lg shadow;
+        display: block;
+      }
+    }
+  }
+}
+
+.hero {
+  @apply flex items-center justify-center flex-col;
+
+  img {
+    @apply w-full mb-4 object-cover object-center;
+  }
+
+  &__content {
+    @apply px-5 text-center mb-10 w-full;
+
+    .form-actions {
+      @apply justify-center;
+    }
+  }
+}
+
+@screen lg {
+  .hero {
+    &__content {
+      @apply w-2/3;
+    }
+  }
+}
+
+@screen sm {
+  .hero {
+    &__content {
+      h1 {
+        @apply text-4xl;
+      }
+    }
+  }
+}
+/* End Hero */
+
+/* Start box title */
+.box-title {
+  @apply text-center mb-10;
+
+  h2 {
+    @apply text-3xl;
+  }
+
+  p {
+    @apply mx-auto;
+  }
+
+  &__underline {
+    @apply flex justify-center;
+
+    span {
+      @apply w-16 h-1 rounded-full bg-indigo-500 inline-flex;
+    }
+  }
+}
+
+@screen sm {
+  .box-title {
+    p {
+      @apply w-3/4;
+    }
+  }
+}
+
+@screen lg {
+  .box-title {
+    p {
+      @apply w-3/4;
+    }
+  }
+}
+/* End box title */
+
+.card {
+  @apply h-full border-2 border-gray-200 rounded-lg overflow-hidden;
+
+  img {
+    @apply w-full object-cover object-center;
+  }
+
+  &__content {
+    @apply p-6;
+
+    a {
+      @apply inline-flex items-center;
+    }
+  }
+}

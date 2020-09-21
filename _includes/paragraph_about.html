@@ -1,0 +1,42 @@
+<section class="bg-image bg-gray-light"
+  style="background-image: url('{{ include.content[1].background }}')">
+
+  <div class="profile">
+    <!--Main Col-->
+    <div class="profile__main">
+      <div class="profile__main_wrapper">
+        <!-- Image for mobile view-->
+        <div class="profile__main_image bg-gray-light"
+          style="background-image: url('{{ include.content[1].avatar }}')">
+        </div>
+
+        <h1>{{ include.content[1].fullname }}</h1>
+        <div class="profile__main_underline"></div>
+
+        <ul>
+          <li>
+            <span class="icon-toolbox"></span>
+            {{ include.content[1].job }}
+          </li>
+          <li>
+            <span class="icon-location-pin-1"></span>
+            {{ include.content[1].address }}
+          </li>
+        </ul>
+
+        <p>{{ include.content[1].bio }}</p>
+
+        <div class="form-actions">
+          <a class="button button--primary" href="">Get In Touch</a>
+        </div>
+      </div>
+    </div>
+
+    <!--Img Col-->
+    <div class="profile__image">
+      <img class="bg-gray-light"
+        src="{{ include.content[1].avatar }}"
+        alt="{{ include.content[1].fullname }}">
+    </div>
+  </div>
+</section>
