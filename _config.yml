@@ -1,8 +1,8 @@
 title: DevWithLC
 email: vanchuyenluu@gmail.com
 description: Whole development Blog.
-baseurl: ""
-url: ""
+baseurl: "/"
+url: "https://chuyenlv.github.io"
 
 github_username: chuyenlv
 
