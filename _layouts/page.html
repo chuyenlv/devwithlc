@@ -3,13 +3,15 @@ layout: default
 ---
 <div class="container">
   <div class="box-title">
-    <h2>{{ page.title | escape }}</h2>
+    <h1>{{ page.title | escape }}</h1>
     <div class="box-title__underline">
       <span></span>
     </div>
   </div>
 
-  <div class="page-content">
-    {{ content }}
-  </div>
+  {%- if page.paragraphs -%}
+    {%- include paragraphs.html items=page.paragraphs -%}
+  {%- endif -%}
+
+  {{ content }}
 </div>

@@ -1,0 +1,12 @@
+<form action="https://docs.google.com/forms/u/1/d/e/{{ include.content[1].formid }}/formResponse"
+  class="box-width-md box-white-shadow" method="POST">
+
+  {% for input in include.content[1].inputs %}
+    {%- include inputs.html input=input -%}
+  {% endfor %}
+
+  {%- assign submit = include.content[1].submit -%}
+  <div class="form-actions">
+    {%- include inputs.html input=submit -%}
+  </div>
+</section>

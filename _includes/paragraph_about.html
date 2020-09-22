@@ -27,7 +27,7 @@
         <p>{{ include.content[1].bio }}</p>
 
         <div class="form-actions">
-          <a class="button button--primary" href="">Get In Touch</a>
+          <a class="button button--primary" href="{{ include.content[1].contact_url | relative_url }}">Get In Touch</a>
         </div>
       </div>
     </div>

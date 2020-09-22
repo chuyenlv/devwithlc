@@ -9,4 +9,5 @@ paragraphs:
     avatar: /assets/lc.jpg
     background: /assets/bg_about.jpg
     bio: Totally optional short description about yourself.
+    contact_url: /contact
 ---

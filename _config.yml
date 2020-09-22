@@ -1,8 +1,19 @@
 title: DevWithLC
 email: vanchuyenluu@gmail.com
 description: Whole development Blog.
-baseurl: "/"
+baseurl: ""
 url: "https://chuyenlv.github.io"
+
+lang: vi
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/default-lc.jpg
+      height: 768
+      width: 1366
+
 
 github_username: chuyenlv
 
