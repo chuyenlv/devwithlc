@@ -21,8 +21,7 @@
   <div class="form-item form-type-textarea">
     <label for="{{ id }}">{{ input.label }}</label>
     <textarea rows="5" class="form-textarea" type="textarea" id="{{ id }}" name="{{ input.name }}"
-      {%- if input.required == "required" -%}required="required" aria-required="true"{%- endif -%}>
-    </textarea>
+      {%- if input.required == "required" -%}required="required" aria-required="true"{%- endif -%}></textarea>
   </div>
 {%- endif -%}
 
