@@ -719,6 +719,23 @@ button:focus, [type="button"]:focus, [type="reset"]:focus, [type="submit"]:focus
   background-color: rgba(203, 213, 224, var(--bg-opacity));
 }
 
+label {
+  display: table;
+  font-weight: 700;
+}
+
+.form-required:after {
+  display: inline-block;
+  margin: 0 0.3em;
+  content: "";
+  vertical-align: "super";
+  background-image: url("../required.svg");
+  background-repeat: "no-repeat";
+  width: 7px;
+  height: 7px;
+  background-size: 7px 7px;
+}
+
 .form-item {
   margin-bottom: 0.5rem;
 }

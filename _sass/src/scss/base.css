@@ -69,6 +69,22 @@ button,
   }
 }
 
+label {
+  @apply table font-bold;
+}
+
+.form-required:after {
+  display: inline-block;
+  margin: 0 0.3em;
+  content: "";
+  vertical-align: "super";
+  background-image: url("../required.svg");
+  background-repeat: "no-repeat";
+  width: 7px;
+  height: 7px;
+  background-size: 7px 7px;
+}
+
 .form-item {
   @apply mb-2;
 

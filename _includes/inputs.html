@@ -3,7 +3,7 @@
 
 {%- if input.type == "text" -%}
   <div class="form-item form-type-textfield">
-    <label for="{{ id }}">{{ input.label }}</label>
+    <label for="{{ id }}" {%- if input.required == "required" -%}class="form-required"{%- endif -%}>{{ input.label }}</label>
     <input class="form-text" type="text" id="{{ id }}" name="{{ input.name }}"
       value="" {%- if input.required == "required" -%}required="required" aria-required="true"{%- endif -%}>
   </div>
@@ -11,7 +11,7 @@
 
 {%- if input.type == "email" -%}
   <div class="form-item form-type-email">
-    <label for="{{ id }}">{{ input.label }}</label>
+    <label for="{{ id }}" {%- if input.required == "required" -%}class="form-required"{%- endif -%}>{{ input.label }}</label>
     <input class="form-email" type="email" id="{{ id }}" name="{{ input.name }}"
       value="" {%- if input.required == "required" -%}required="required" aria-required="true"{%- endif -%}>
   </div>
@@ -19,7 +19,7 @@
 
 {%- if input.type == "textarea" -%}
   <div class="form-item form-type-textarea">
-    <label for="{{ id }}">{{ input.label }}</label>
+    <label for="{{ id }}" {%- if input.required == "required" -%}class="form-required"{%- endif -%}>{{ input.label }}</label>
     <textarea rows="5" class="form-textarea" type="textarea" id="{{ id }}" name="{{ input.name }}"
       {%- if input.required == "required" -%}required="required" aria-required="true"{%- endif -%}></textarea>
   </div>
