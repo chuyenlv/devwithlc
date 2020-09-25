@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Contact
+title: Liên hệ
 permalink: /contact
 
 paragraphs:
@@ -9,21 +9,23 @@ paragraphs:
     inputs:
       -
         name: entry.1534305664
-        label: Full Name
+        label: Họ và tên
         type: text
         required: required
       -
         name: emailAddress
-        label: Your E-mail
+        label: Email của bạn
         type: email
         required: required
       -
         name: entry.286656756
-        label: Message
+        label: Nội dung tin nhắn
         type: textarea
         required: required
     submit:
       name: op
-      value: Send Message
+      value: Gửi tin nhắn
       type: submit
+
+has_form: true
 ---

@@ -1,13 +1,15 @@
 ---
 layout: landing
+title: Chuyển Lưu
+hide_title: true
 
 paragraphs:
   paragraph_about:
-    fullname: Chuyen Luu
-    job: Drupal Developer
-    address: 1/76 - 389 Truong Dinh - Hoang Mai - Ha Noi
+    fullname: Chuyển Lưu
+    job: Drupal Developer - FFW Vietnam
+    address: VTC Online Building, 18 Tam Trinh, Hai Bà Trưng, Hà Nội
     avatar: /assets/lc.jpg
     background: /assets/bg_about.jpg
-    bio: Totally optional short description about yourself.
+    bio: Tri thức là vô hạn, khả năng học hỏi của con người là hữu hạn.
     contact_url: /contact
 ---

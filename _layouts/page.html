@@ -2,12 +2,14 @@
 layout: default
 ---
 <div class="container">
-  <div class="box-title">
-    <h1>{{ page.title | escape }}</h1>
-    <div class="box-title__underline">
-      <span></span>
+  {%- if page.title -%}
+    <div class="box-title">
+      <h1>{{ page.title | escape }}</h1>
+      <div class="box-title__underline">
+        <span></span>
+      </div>
     </div>
-  </div>
+  {%- endif -%}
 
   {%- if page.paragraphs -%}
     {%- include paragraphs.html items=page.paragraphs -%}
@@ -15,3 +17,7 @@ layout: default
 
   {{ content }}
 </div>
+
+{%- if page.has_form -%}
+  {%- include validation.html -%}
+{%- endif -%}

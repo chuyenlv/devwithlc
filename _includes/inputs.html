@@ -4,24 +4,40 @@
 {%- if input.type == "text" -%}
   <div class="form-item form-type-textfield">
     <label for="{{ id }}" {%- if input.required == "required" -%}class="form-required"{%- endif -%}>{{ input.label }}</label>
-    <input class="form-text" type="text" id="{{ id }}" name="{{ input.name }}"
-      value="" {%- if input.required == "required" -%}required="required" aria-required="true"{%- endif -%}>
+
+    {%- assign classes = 'form-text' -%}
+    {%- if input.required == "required" -%}
+      {%- assign classes = classes | append: ' validate[required]' -%}
+    {%- endif -%}
+    <input class="{{ classes }}" type="text" id="{{ id }}" name="{{ input.name }}" value=""
+      {%- if input.required == "required" -%}required="required" aria-required="true"{%- endif -%}>
   </div>
 {%- endif -%}
 
 {%- if input.type == "email" -%}
   <div class="form-item form-type-email">
     <label for="{{ id }}" {%- if input.required == "required" -%}class="form-required"{%- endif -%}>{{ input.label }}</label>
-    <input class="form-email" type="email" id="{{ id }}" name="{{ input.name }}"
-      value="" {%- if input.required == "required" -%}required="required" aria-required="true"{%- endif -%}>
+
+    {%- assign classes = 'form-email' -%}
+    {%- if input.required == "required" -%}
+      {%- assign classes = classes | append: ' validate[required,custom[email]]' -%}
+    {%- endif -%}
+    <input class="{{ classes }}" type="email" id="{{ id }}" name="{{ input.name }}" value=""
+      {%- if input.required == "required" -%}required="required" aria-required="true"{%- endif -%}>
   </div>
 {%- endif -%}
 
 {%- if input.type == "textarea" -%}
   <div class="form-item form-type-textarea">
     <label for="{{ id }}" {%- if input.required == "required" -%}class="form-required"{%- endif -%}>{{ input.label }}</label>
-    <textarea rows="5" class="form-textarea" type="textarea" id="{{ id }}" name="{{ input.name }}"
-      {%- if input.required == "required" -%}required="required" aria-required="true"{%- endif -%}></textarea>
+
+    {%- assign classes = 'form-textarea' -%}
+    {%- if input.required == "required" -%}
+      {%- assign classes = classes | append: ' validate[required]' -%}
+    {%- endif -%}
+    <textarea rows="5" class="{{ classes }}" type="textarea" id="{{ id }}"
+      {%- if input.required == "required" -%}required="required" aria-required="true"{%- endif -%}
+      name="{{ input.name }}"></textarea>
   </div>
 {%- endif -%}
 

@@ -1,5 +1,5 @@
 <form action="https://docs.google.com/forms/u/1/d/e/{{ include.content[1].formid }}/formResponse"
-  class="box-width-md box-white-shadow" method="POST">
+  target="_self" id="mG61Hd" class="google-form box-width-md box-white-shadow" method="POST">
 
   {% for input in include.content[1].inputs %}
     {%- include inputs.html input=input -%}

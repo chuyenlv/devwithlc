@@ -2,6 +2,25 @@
 layout: default
 ---
 
+{%- if page.hide_title -%}
+  <h1 class="hidden">{{ page.title | escape }}</h1>
+{%- else -%}
+  <div class="container">
+    <div class="box-title">
+      <h1>{{ page.title | escape }}</h1>
+      <div class="box-title__underline">
+        <span></span>
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+
 {%- if page.paragraphs -%}
   {%- include paragraphs.html items=page.paragraphs -%}
+{%- endif -%}
+
+{{ content }}
+
+{%- if page.has_form -%}
+  {%- include validation.html -%}
 {%- endif -%}

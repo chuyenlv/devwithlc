@@ -1,6 +1,6 @@
-title: DevWithLC
+title: BlogLC
 email: vanchuyenluu@gmail.com
-description: Whole development Blog.
+description: Blog lập trình Website.
 baseurl: ""
 url: "https://chuyenluu.ga"
 
@@ -13,7 +13,6 @@ defaults:
       image: /assets/default-lc.jpg
       height: 768
       width: 1366
-
 
 github_username: chuyenlv
 
